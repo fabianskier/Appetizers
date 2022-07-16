@@ -20,7 +20,7 @@ struct AppetizerListView: View {
                 .listStyle(.plain)
                 .navigationTitle("🍟 Appetizers")
             }
-            .navigationViewStyle(.stack)
+            
             .onAppear {
                 viewModel.getAppetizers()
             }
@@ -29,7 +29,9 @@ struct AppetizerListView: View {
                 LoadingView()
             }
             
-        }.alert(item: $viewModel.alertItem) { alertItem in
+        }
+        .navigationViewStyle(.stack)
+        .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title,
                   message: alertItem.message,
                   dismissButton: alertItem.dismissButton)
