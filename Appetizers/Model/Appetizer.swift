@@ -63,4 +63,9 @@ struct MockData {
                              sampleAppetizerTwo,
                              sampleAppetizerThree,
                              sampleAppetizerFour]
+    
+    static let orderItems = [sampleAppetizerOne,
+                             sampleAppetizerTwo,
+                             sampleAppetizerThree,
+                             sampleAppetizerFour]
 }
