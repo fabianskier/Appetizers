@@ -9,7 +9,8 @@ import SwiftUI
 
 final class ImageLoader: ObservableObject {
     
-    @Published var image: Image? = nil
+    @Published
+    var image: Image? = nil
     
     func load(fromURLString urlString: String) {
         NetworkManager.shared.downloadImage(fromURLString: urlString) { uiImage in
