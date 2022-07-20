@@ -37,6 +37,11 @@ struct AlertContext {
                   message: Text("Unable to complete your request at this time. Please check your internet connection."),
                   dismissButton: .default(Text("Ok")))
     
+    static let genericError =
+        AlertItem(title: Text("Server Error"),
+                  message: Text("Unable to complete your request at this time. Please check your internet connection."),
+                  dismissButton: .default(Text("Ok")))
+    
     // MARK: - Account alerts
     static let invalidForm =
         AlertItem(title: Text("Invalid Form"),
