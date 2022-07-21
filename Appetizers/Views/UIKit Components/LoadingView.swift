@@ -24,7 +24,10 @@ struct LoadingView: View {
             Color(.systemBackground)
                 .ignoresSafeArea(.all)
             
-            ActivityIndicator()
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle())
+                .tint(Color("AccentColor"))
+                .scaleEffect(2)
         }
     }
 }
@@ -33,5 +36,6 @@ struct LoadingView: View {
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
         LoadingView()
+            .preferredColorScheme(.dark)
     }
 }
